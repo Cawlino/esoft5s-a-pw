@@ -26,7 +26,7 @@ function generateInfoSection(images, pokemonName) {
   })
 }
 
-async function getPokemonData(name) {
+async function getEstados(name) {
   // fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
   //   .then((fetchData) => {
   //     return fetchData.json()
@@ -35,7 +35,7 @@ async function getPokemonData(name) {
   //   .catch((error) => console.error(error))
 
   try {
-    const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+    const data = await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados${estados}`)
 
     const jsonData = await data.json()
 
